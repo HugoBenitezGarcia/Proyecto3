@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cátalogo">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+<nav>
+    <a class="nav-brand" href="./index.html">Enciclopedia Hyrule</a>
+    <a href="./index.html">Buscador</a>
+    <a href="./Favoritos.html">Favoritos</a>
+    <a href="./Catalogo.html" class="active">Catálogo</a>
+</nav>
+
+<header class="hero">
+    <h1>Catálogo de Juegos</h1>
+    <p>Los mejores títulos de la saga</p>
+</header>
+
+<main>
+    <section>
+        <h2>Juegos de la saga</h2>
+
+        <p class="table-toolbar">
+            <button id="btn-csv" class="btn-primary">Exportar CSV</button>
+        </p>
+
+        <p id="status" class="status status-loading" role="status" aria-live="polite">
+            <span class="spinner"></span> Cargando catálogo desde XML…
+        </p>
+
+        <section class="table-wrap">
+            <table id="games-table" aria-label="Catálogo de juegos de Zelda">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Desarrolladora</th>
+                    <th>Publicadora</th>
+                    <th>Plataforma</th>
+                    <th>Año</th>
+                    <th>Puntuación</th>
+                </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </section>
+    </section>
+
+    <section>
+        <h2>Esquemas de validación</h2>
+        <article class="card" style="padding:1.2rem; max-width:480px; margin-bottom:1rem;">
+            <span class="badge">XSD</span>
+            <h3 style="margin-top:0.5rem; font-size:0.95rem;">juegos.xsd</h3>
+            <p class="desc">Valida la estructura del catálogo XML. Define <code>anio</code> y <code>puntuacion</code> como <code>xs:integer</code> y el resto como <code>xs:string</code>.</p>
+            <small>data/juegos.xsd</small>
+        </article>
+        <article class="card" style="padding:1.2rem; max-width:480px;">
+            <span class="badge" style="background:#c9a84c;">JSON Schema</span>
+            <h3 style="margin-top:0.5rem; font-size:0.95rem;">entidad_schema.json</h3>
+            <p class="desc">Valida entidades de la Zelda API. Campos requeridos: <code>id</code>, <code>name</code>, <code>description</code>.</p>
+            <small>schemas/entidad_schema.json</small>
+        </article>
+    </section>
+</main>
+
+<script type="module" src="./js/catalogo.js"></script>
+
+</body>
+</html>
+
