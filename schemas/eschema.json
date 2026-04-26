@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EntidadZelda",
+  "description": "Valida entidad Zelda API.",
+  "type": "object",
+  "required": ["id", "name", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador unico de entidad."
+    },
+    "name": {
+      "type": "string",
+      "description": "Nombre del personaje."
+    },
+    "description": {
+      "type": "string",
+      "description": "Texto descriptivo del elemento."
+    },
+    "gender": {
+      "type": "string",
+      "description": "Genero del personaje."
+    },
+    "race": {
+      "type": "string",
+      "description": "Raza del personaje."
+    },
+    "appearances": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "Juegos donde aparece."
+    }
+  },
+  "additionalProperties": true
+}
