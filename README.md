@@ -38,3 +38,6 @@ El código verifica si la respuesta es exitosa (ej. 200 OK). Si hay fallos de se
     }
   ]
 }
+```
+
+los js los he hecho con ia alfinal poruqe llevo toda la semana intentando que me funcione la api y el firebase pero no he conseguido poder hacerlo :(
