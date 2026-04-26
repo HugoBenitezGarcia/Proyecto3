@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Favoritos">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+<nav>
+    <a class="nav-brand" href="./index.html">Enciclopedia Hyrule</a>
+    <a href="./index.html">Buscador</a>
+    <a href="./Favoritos.html" class="active">Favoritos</a>
+    <a href="./Catalogo.html">Catálogo</a>
+</nav>
+
+<header class="hero">
+    <h1>Mis Favoritos</h1>
+    <p>Tu colección personal guardada en la nube</p>
+</header>
+
+<main>
+    <section>
+        <h2>Lista de favoritos</h2>
+
+        <p class="fav-controls">
+            <select id="sort-select">
+                <option value="date-desc">Más reciente primero</option>
+                <option value="date-asc">Más antiguo primero</option>
+                <option value="name-asc">Nombre A → Z</option>
+                <option value="name-desc">Nombre Z → A</option>
+            </select>
+            <select id="filter-select">
+                <option value="all">Todos los tipos</option>
+                <option value="characters">Solo personajes</option>
+                <option value="monsters">Solo monstruos</option>
+            </select>
+            <button id="btn-clear" class="btn-danger">🗑Vaciar lista</button>
+        </p>
+
+        <p id="status" class="status status-loading" role="status" aria-live="polite">
+            <span class="spinner"></span> Cargando favoritos desde Firestore…
+        </p>
+        <ul id="fav-list" class="fav-list"></ul>
+    </section>
+</main>
+
+<script type="module" src="./js/favoritos.js"></script>
+
+</body>
+</html>
+
