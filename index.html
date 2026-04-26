@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enciclopedia Hyrule">
+    <title>Buscador | Enciclopedia Hyrule</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<nav>
+    <a class="nav-brand" href="./index.html">Enciclopedia Hyrule</a>
+    <a href="./index.html" class="active">Buscador</a>
+    <a href="./favoritos.html">Favoritos</a>
+    <a href="./catalogo.html">Catálogo</a>
+</nav>
+
+<header class="hero">
+    <h1>Enciclopedia Hyrule</h1>
+    <p>Explora el universo de The Legend of Zelda</p>
+</header>
+
+<main>
+    <section>
+        <h2>Buscador</h2>
+        <p class="controls">
+            <input type="text" id="search-input"
+                   placeholder="Escribe un nombre para buscar…"
+                   autocomplete="off" autofocus>
+            <select id="type-select">
+                <option value="characters">Personajes</option>
+                <option value="monsters">Monstruos</option>
+            </select>
+        </p>
+        <section id="results-grid" class="grid" role="list"></section>
+    </section>
+</main>
+
+<script type="module" src="./js/buscador.js"></script>
+
+</body>
+</html>
+
