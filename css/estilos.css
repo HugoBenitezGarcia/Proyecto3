@@ -1,165 +1,38 @@
-:root {
-    --bg: #f7f4ef;
-    --nav-bg: #1a2b1c;
-    --nav-text: #ddd5bc;
-    --primary: #4d7c5a;
-    --accent: #c9a84c;
-    --card-bg: #ffffff;
-    --text: #1a1a1a;
-    --border: #e2d9c8;
+{
+"$schema": "http://json-schema.org/draft-07/schema#",
+"title": "EntidadZelda",
+"description": "Valida entidad Zelda API.",
+"type": "object",
+"required": ["id", "name", "description"],
+"properties": {
+"id": {
+"type": "string",
+"description": "Identificador unico de entidad."
+},
+"name": {
+"type": "string",
+"description": "Nombre del personaje."
+},
+"description": {
+"type": "string",
+"description": "Texto descriptivo del elemento."
+},
+"gender": {
+"type": "string",
+"description": "Genero del personaje."
+},
+"race": {
+"type": "string",
+"description": "Raza del personaje."
+},
+"appearances": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uri"
+},
+"description": "Juegos donde aparece."
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
-
-nav {
-    background: var(--nav-bg);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-brand {
-    font-family: Georgia, serif;
-    color: var(--accent);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a {
-    color: var(--nav-text);
-    text-decoration: none;
-    padding: 10px;
-}
-
-.hero {
-    background: var(--nav-bg);
-    color: var(--nav-text);
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.hero h1 {
-    font-family: Georgia, serif;
-    color: var(--accent);
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.controls, .fav-controls {
-    margin-bottom: 20px;
-}
-
-input, select {
-    padding: 10px;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 16px;
-}
-
-.status {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.status-error { background: #ffcccc; color: #cc0000; }
-.status-success { background: #ccffcc; color: #006600; }
-.status-info, .status-loading, .status-empty { background: var(--border); }
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    width: 250px;
-    padding: 15px;
-}
-
-.badge {
-    background: var(--primary);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 12px;
-}
-
-.btn-fav, .btn-primary, .btn-danger, .btn-remove {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-family: inherit;
-}
-
-.btn-primary { background: var(--primary); color: white; }
-.btn-danger { background: #cc0000; color: white; }
-.btn-fav { background: var(--border); color: black; width: 100%; }
-.btn-fav.saved { background: var(--accent); color: white; }
-
-.fav-list {
-    list-style: none;
-}
-
-.fav-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--card-bg);
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid var(--border);
-    text-align: left;
-}
-
-th {
-    background: var(--primary);
-    color: white;
-}
-
-.spinner {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 2px solid black;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: giro 1s linear infinite;
-}
-
-@keyframes giro {
-    to { transform: rotate(360deg); }
-}
-
-@media (max-width: 600px) {
-    nav { flex-direction: column; text-align: center; }
-    .card { width: 100%; }
+},
+"additionalProperties": true
 }
